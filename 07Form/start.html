@@ -1,20 +1,67 @@
 <!DOCTYPE html>
 <html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		/>
+		<title>Lezione HTML</title>
+		<style>
+			label {
+				display: block;
+			}
+		</style>
+	</head>
 
-<head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Lezione HTML</title>
-	<style>
-		label {
-			display: block
-		}
-	</style>
-</head>
+	<body>
+		<h2>Subscirption form! (The form exercise)</h2>
 
-<body>
+		<form name="myForm">
+			<label for="fname">First name:</label>
+			<input type="text" id="fname" name="fname" /><br /><br />
+			<label for="surname">Surname:</label>
+			<input type="text" id="surname" name="surname" /><br /><br />
+			<label for="email">Email:</label>
+			<input type="text" id="email" name="email" /><br /><br />
+			<label for="pword">Password:</label>
+			<input type="text" id="pword" name="pword" /><br /><br />
+			<label for="pnumber">Phone number:</label>
+			<input type="tel" id="pnumber" name="pnumber" /><br /><br />
+			<hr />
 
-</body>
+			<label for="monthly_plan">Choose a plan:</label>
+			<select name="monthly_plan" id="monthly_plan">
+				<option value="free">Free</option>
+				<option value="10EUR_pm">10EUR per month</option>
+				<option value="20EUR_pm">20EUR per month</option>
+				<option value="25EUR_pm">25EUR per month</option>
+			</select>
+			<p>Do you want to add PRO advantages to your plan?</p>
+			<div>
+				<input type="checkbox" id="yes" name="yes" />
+				<label for="yes">Yes!</label>
+			</div>
+			<div>
+				<input type="checkbox" id="no" name="no" />
+				<label for="no">No, thank you</label>
+			</div>
 
+			<br /><br />
+			<hr />
+
+			<label for="credit_card">Add payment details:</label>
+			<label for="cardN">Card number:</label>
+			<input type="number" id="cardN" name="cardN" /><br /><br />
+			<label for="cvc">CVC:</label>
+			<input type="number" id="cvc" name="cvc" /><br /><br />
+			<label for="exdate">Expiration date:</label>
+			<input type="number" id="exdate" name="exdate" /><br /><br />
+			<label for="bill_ad">Billing adress:</label>
+			<input type="text" id="bill_ad" name="bill_ad" /><br /><br />
+			<input type="button" onclick="formSubmit()" value="Send form data!" />
+			<hr />
+		</form>
+	</body>
 </html>
